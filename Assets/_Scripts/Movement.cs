@@ -20,7 +20,9 @@ public class Movement: MonoBehaviour
     public int toRightScale;
     public bool grounded;
     public int jumpCount;
-  
+    public bool attacking;
+    public bool shielding;
+
     void Start()
     {
         
@@ -30,8 +32,11 @@ public class Movement: MonoBehaviour
     void Update()
     {
         float hor, ver;
+        //Setting up velocity
         hor = Input.GetAxisRaw("Horizontal") * speed;
         ver = rigid.velocity.y;
+        if (shielding)
+            hor /= 3;
         dir = new Vector2(hor, ver);
         rigid.velocity = dir; 
         //Set animation 
@@ -59,12 +64,50 @@ public class Movement: MonoBehaviour
             {
                 jumpCount++;
             }
-            if(jumpCount <= maxAirJump)
+            if(jumpCount <= maxAirJump && !shielding)
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, 0);
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
             
         }
+
+        //Hitting
+        if(Input.GetMouseButtonDown(0))
+        {
+            anim.SetBool("attack", true);
+            attacking = true;
+        }
+        if(Input.GetMouseButtonUp(0))
+        {
+            attacking = false;
+        }
+        
+
+        //ShieldingIn
+        if (Input.GetMouseButtonDown(1))
+        {
+            anim.SetBool("shield", true);
+            shielding = true;
+        }
+        if(Input.GetMouseButtonUp(1))
+        {
+            anim.SetBool("shield", false);
+            shielding = false;
+        }
+
+    }
+
+
+    //Animation event functions
+    public void onHit()
+    {
+        if (!attacking)
+            anim.SetBool("attack", false);
+    }
+
+    public void onShield()
+    {
+        anim.SetBool("toIdle", true);
     }
 }

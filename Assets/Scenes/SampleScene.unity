@@ -517,7 +517,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -554,7 +554,6 @@ MonoBehaviour:
   speed: 5
   jumpPower: 8
   maxAirJump: 1
-  gScale: 1
   rigid: {fileID: 266487103}
   anim: {fileID: 266487101}
   topLeft: {fileID: 1158473217}
@@ -566,8 +565,6 @@ MonoBehaviour:
   toRightScale: 1
   grounded: 0
   jumpCount: 0
-  hor: 0
-  ver: 0
 --- !u!61 &266487106
 BoxCollider2D:
   m_ObjectHideFlags: 0
