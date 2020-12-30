@@ -39,7 +39,7 @@ public class Movement: MonoBehaviour
             hor /= 3;
         dir = new Vector2(hor, ver);
         rigid.velocity = dir; 
-        //Set animation 
+        //Set animation  
         anim.SetFloat("speed", Mathf.Abs(hor));
 
         //Flip char to looking direction.
@@ -58,7 +58,7 @@ public class Movement: MonoBehaviour
         {
             jumpCount = 0;
         }
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             if(!grounded)
             {
@@ -72,42 +72,10 @@ public class Movement: MonoBehaviour
             
         }
 
-        //Hitting
-        if(Input.GetMouseButtonDown(0))
-        {
-            anim.SetBool("attack", true);
-            attacking = true;
-        }
-        if(Input.GetMouseButtonUp(0))
-        {
-            attacking = false;
-        }
         
 
-        //ShieldingIn
-        if (Input.GetMouseButtonDown(1))
-        {
-            anim.SetBool("shield", true);
-            shielding = true;
-        }
-        if(Input.GetMouseButtonUp(1))
-        {
-            anim.SetBool("shield", false);
-            shielding = false;
-        }
-
     }
 
 
-    //Animation event functions
-    public void onHit()
-    {
-        if (!attacking)
-            anim.SetBool("attack", false);
-    }
-
-    public void onShield()
-    {
-        anim.SetBool("toIdle", true);
-    }
+    
 }
