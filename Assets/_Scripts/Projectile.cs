@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float lifeSpan;
+    public int damage;
+    public int playerNo;
     private void Awake()
     {
         Destroy(this.gameObject, lifeSpan);

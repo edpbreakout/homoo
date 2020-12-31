@@ -1,0 +1,707 @@
+fileFormatVersion: 2
+guid: b7ef816638a796249b049c16f2eddb97
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3670490536153803396
+    second: James_SpriteSheet_0
+  - first:
+      213: -7915314496931401782
+    second: James_SpriteSheet_1
+  - first:
+      213: 7652675247423865358
+    second: James_SpriteSheet_2
+  - first:
+      213: 1080082914509763043
+    second: James_SpriteSheet_3
+  - first:
+      213: 2980064303420828271
+    second: James_SpriteSheet_4
+  - first:
+      213: 4716909624195933300
+    second: James_SpriteSheet_5
+  - first:
+      213: -7500432436644042706
+    second: James_SpriteSheet_6
+  - first:
+      213: 3841531984298217060
+    second: James_SpriteSheet_7
+  - first:
+      213: -6566103322027492043
+    second: James_SpriteSheet_8
+  - first:
+      213: 5741082063032464463
+    second: James_SpriteSheet_9
+  - first:
+      213: -5274935854773015994
+    second: James_SpriteSheet_10
+  - first:
+      213: -2567717194589007800
+    second: James_SpriteSheet_11
+  - first:
+      213: 436246820855590493
+    second: James_SpriteSheet_12
+  - first:
+      213: -3313146100260240760
+    second: James_SpriteSheet_13
+  - first:
+      213: 684628200787727362
+    second: James_SpriteSheet_14
+  - first:
+      213: -6345048383277934066
+    second: James_SpriteSheet_15
+  - first:
+      213: -8943477169823891916
+    second: James_SpriteSheet_16
+  - first:
+      213: 8999809007556991182
+    second: James_SpriteSheet_17
+  - first:
+      213: 8949873741190214115
+    second: James_SpriteSheet_18
+  - first:
+      213: 150567167313642649
+    second: James_SpriteSheet_19
+  - first:
+      213: -1988117402223434833
+    second: James_SpriteSheet_20
+  - first:
+      213: 6513290073557534141
+    second: James_SpriteSheet_21
+  - first:
+      213: -166859598563914269
+    second: James_SpriteSheet_22
+  - first:
+      213: -7193426606416695435
+    second: James_SpriteSheet_23
+  - first:
+      213: 7269027236975983731
+    second: James_SpriteSheet_24
+  - first:
+      213: 2969967319521581258
+    second: James_SpriteSheet_25
+  - first:
+      213: -4891367162607022185
+    second: James_SpriteSheet_26
+  - first:
+      213: -5671311114416808999
+    second: James_SpriteSheet_27
+  - first:
+      213: 3848900850267304562
+    second: James_SpriteSheet_28
+  - first:
+      213: -276926284510378876
+    second: James_SpriteSheet_29
+  - first:
+      213: -7694820182051756434
+    second: James_SpriteSheet_30
+  - first:
+      213: -4575574747689413190
+    second: James_SpriteSheet_31
+  - first:
+      213: -3903602653947554740
+    second: James_SpriteSheet_32
+  - first:
+      213: 4327511712222460907
+    second: James_SpriteSheet_0
+  - first:
+      213: -974708091886111791
+    second: James_SpriteSheet_1
+  - first:
+      213: -8909937960591427304
+    second: James_SpriteSheet_2
+  - first:
+      213: -8169996413572249284
+    second: James_SpriteSheet_3
+  - first:
+      213: 5838442549529609096
+    second: James_SpriteSheet_4
+  - first:
+      213: -6639791892982104273
+    second: James_SpriteSheet_5
+  - first:
+      213: -3620070401788652743
+    second: James_SpriteSheet_6
+  - first:
+      213: 7702964521482866351
+    second: James_SpriteSheet_7
+  - first:
+      213: 27393275017732227
+    second: James_SpriteSheet_8
+  - first:
+      213: 8803211433286832454
+    second: James_SpriteSheet_9
+  - first:
+      213: 2327541731491671048
+    second: James_SpriteSheet_10
+  - first:
+      213: -6437415920735109077
+    second: James_SpriteSheet_11
+  - first:
+      213: 8319949805619423547
+    second: James_SpriteSheet_12
+  - first:
+      213: -6509522231565361855
+    second: James_SpriteSheet_13
+  - first:
+      213: -197613057730318998
+    second: James_SpriteSheet_14
+  - first:
+      213: 5186766157172649536
+    second: James_SpriteSheet_15
+  - first:
+      213: -6541214577252222136
+    second: James_SpriteSheet_16
+  - first:
+      213: 3385559781546402195
+    second: James_SpriteSheet_17
+  - first:
+      213: 3244542945147706131
+    second: James_SpriteSheet_18
+  - first:
+      213: -880808563942319469
+    second: James_SpriteSheet_19
+  - first:
+      213: 798386382585370749
+    second: James_SpriteSheet_20
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: James_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 47
+        height: 54
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebbc5069f86e0c30800000000000000
+      internalID: 4327511712222460907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3fd6797242972f0800000000000000
+      internalID: -974708091886111791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 47
+        height: 56
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819fd28b1aa895480800000000000000
+      internalID: -8909937960591427304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 256
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c398fc06c875e9e80800000000000000
+      internalID: -8169996413572249284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 51
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8830d3eb090560150800000000000000
+      internalID: 5838442549529609096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 56
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f7844d378bad3a0800000000000000
+      internalID: -6639791892982104273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 56
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9335b77462de2cdc0800000000000000
+      internalID: -3620070401788652743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 50
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fae4c649b6d66ea60800000000000000
+      internalID: 7702964521482866351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 39
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380aaaad902516000800000000000000
+      internalID: 27393275017732227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 33
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64118bb382a4b2a70800000000000000
+      internalID: 8803211433286832454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 32
+        height: 54
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c65797fd61d4020800000000000000
+      internalID: 2327541731491671048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 32
+        height: 53
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20c325b354b9a6a0800000000000000
+      internalID: -6437415920735109077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 33
+        height: 52
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39a6096446667370800000000000000
+      internalID: 8319949805619423547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 47
+        height: 54
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14dd902f40889a5a0800000000000000
+      internalID: -6509522231565361855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 65
+        width: 47
+        height: 53
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d610398ffe14df0800000000000000
+      internalID: -197613057730318998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e2b4bd6581bf740800000000000000
+      internalID: 5186766157172649536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 65
+        width: 47
+        height: 54
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84b3643bfffe835a0800000000000000
+      internalID: -6541214577252222136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 47
+        height: 56
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3912ce01facebfe20800000000000000
+      internalID: 3385559781546402195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b57084e9ee60d20800000000000000
+      internalID: 3244542945147706131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 47
+        height: 55
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39a981f174db6c3f0800000000000000
+      internalID: -880808563942319469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: James_SpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1
+        width: 47
+        height: 54
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7892875f20741b00800000000000000
+      internalID: 798386382585370749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
