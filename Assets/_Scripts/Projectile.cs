@@ -5,7 +5,6 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public float lifeSpan;
-    public int damage;
     public int playerNo;
     private void Awake()
     {
@@ -16,6 +15,8 @@ public class Projectile : MonoBehaviour
         this.GetComponent<CircleCollider2D>().enabled = false;
         Rigidbody2D rg = this.GetComponent<Rigidbody2D>();
         rg.velocity = Vector2.zero;
+
+       
     }
     // Start is called before the first frame update
     void Start()

@@ -19,26 +19,27 @@ public class Movement : MonoBehaviour
     public Transform topLeft;
     public Transform bottomRight;
     public LayerMask groundLayer;
-    [Header("Dynamic")]
-    public Vector2 dir;
-    public int toRightScale;
     public bool grounded;
     public int jumpCount;
+    public List<Collider2D> groundCollisions;
+    [Header("Dynamic")]
     public bool attacking;
     public bool shielding;
     public PlayerInfo cm;
+    private Vector2 dir;
     void Start()
     {
         cm = ControllManager.S.players[PlayerNo];
     }
 
+
+
+    
     // Update is called once per frame
     void Update()
     {
         float hor = 0, ver;
-        //Setting up velocity
-        //hor = Input.GetAxisRaw("Hori1") * speed;
-
+       
         if (Input.GetKey(cm.controlls["left"]))
         {
             hor = -speed;
