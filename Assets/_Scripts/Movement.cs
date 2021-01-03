@@ -23,13 +23,13 @@ public class Movement : MonoBehaviour
     public int jumpCount;
     public List<Collider2D> groundCollisions;
     [Header("Dynamic")]
-    public bool attacking;
-    public bool shielding;
+    public Battling btl;
     public PlayerInfo cm;
     private Vector2 dir;
     void Start()
     {
         cm = ControllManager.S.players[PlayerNo];
+        btl = GetComponent<Battling>();
     }
 
 
@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
         }
 
         ver = rigid.velocity.y;
-        if (shielding)
+        if (btl.shielding)
             hor /= 3;
         dir = new Vector2(hor, ver);
         rigid.velocity = dir;
@@ -88,7 +88,7 @@ public class Movement : MonoBehaviour
             {
                 jumpCount++;
             }
-            if (jumpCount <= maxAirJump && !shielding)
+            if (jumpCount <= maxAirJump && !btl.shielding)
             {
                 rigid.velocity = new Vector2(rigid.velocity.x, 0);
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);

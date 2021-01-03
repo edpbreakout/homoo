@@ -11,7 +11,6 @@ public class Battling : MonoBehaviour
     public GameObject proj; //Projectile
     public float shootPower;
     public int maxHealth;
-    public float respawnTime;
     public List<GameObject> hearts;
     [Header("Melee attacking")]
     public LayerMask attackables;
@@ -19,9 +18,11 @@ public class Battling : MonoBehaviour
     public List<Collider2D> attackCollisions;
     ContactFilter2D ctc;
     [Header("Dynamic")]
-    public Rigidbody2D rigid;
+    public bool attacking;
+    public bool shielding;
     public int gunType;
     public int health;
+    public Rigidbody2D rigid;
     public Movement parent;
     private Vector3 mousePos;
     private Camera mainCam;
@@ -37,22 +38,21 @@ public class Battling : MonoBehaviour
     }
     public void Spawn()
     {
-        rigid = GetComponent<Rigidbody2D>();
+        gameObject.SetActive(true);
+        rigid = GetComponent<Rigidbody2D>(  );
         health = maxHealth;
         rigid.velocity = Vector3.zero;
         foreach(GameObject go in hearts)
         {
             go.GetComponent<Animator>().SetBool("toIdle", true);
             go.GetComponent<Animator>().SetBool("isDead", false);
-
         }
-
         print("Spawned");
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Projectile>() != null && !parent.shielding)
+        if (collision.gameObject.GetComponent<Projectile>() != null && !shielding)
         {
             Projectile proj = collision.gameObject.GetComponent<Projectile>();
             if(proj.playerNo != parent.PlayerNo)
@@ -85,13 +85,13 @@ public class Battling : MonoBehaviour
     void Update()
     {
         //Hitting
-        if (Input.GetKeyDown(parent.cm.controlls["attack"]))
+        if (Input.GetKeyDown(parent.cm.controlls["attack"]) && !attacking && !shielding)
         {
             if(gunType == 0)
             {
                 attackZone.OverlapCollider(ctc, attackCollisions);
                 parent.anim.SetBool("attack", true);
-                parent.attacking = true;    
+                attacking = true;    //This value set to false, when animation ends;
                 foreach(Collider2D go in attackCollisions)
                 {
                     Battling btl = go.GetComponentInParent<Battling>();
@@ -108,21 +108,18 @@ public class Battling : MonoBehaviour
             }
 
         }
-        if (Input.GetKeyUp(parent.cm.controlls["attack"]))
-        {
-            parent.attacking = false;
-        }
+      
        
         //ShieldingIn
         if (Input.GetKeyDown(parent.cm.controlls["shield"]))
         {
             parent.anim.SetBool("shield", true);
-            parent.shielding = true;
+            shielding = true;
         }
         if (Input.GetKeyUp(parent.cm.controlls["shield"]))
         {
             parent.anim.SetBool("shield", false);
-            parent.shielding = false;
+            shielding = false;
         }
 
         if(Input.GetKeyDown(parent.cm.controlls["change"]))
@@ -154,8 +151,8 @@ public class Battling : MonoBehaviour
     //Animation event functions
     public void onHit()
     {
-        if (!parent.attacking)
-            parent.anim.SetBool("attack", false);
+        attacking = false;
+        parent.anim.SetBool("attack", false);
     }
 
     public void onShield()

@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeSpan: 5
-  damage: 1
+  playerNo: 0
 --- !u!1 &3414090616649582818
 GameObject:
   m_ObjectHideFlags: 0

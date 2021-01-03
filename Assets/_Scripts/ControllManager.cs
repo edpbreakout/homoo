@@ -16,12 +16,21 @@ public class ControllManager : MonoBehaviour
     public List<GameObject> playerPrefabs;
     public List<GameObject> spawnPoints;
     public List<PlayerInfo> players;
-
+    public float respawnTime;
+    
+    IEnumerator Delay(GameObject plr)
+    {
+        yield return new WaitForSeconds(respawnTime);
+        plr.GetComponent<Battling>().Spawn();
+    }
     public void respawn(int playerNo)
     {
-        GameObject plr = players[playerNo].player;
+        GameObject plr;
+        plr = players[playerNo].player;
         plr.transform.position = players[playerNo].spawnPoint.transform.position;
-        plr.GetComponent<Battling>().Spawn();  
+        print("Player " + playerNo + " is dead, and going to respawn in " + respawnTime + " seconds");
+        StartCoroutine(Delay(plr));
+        plr.SetActive(false);
     }
     private void Awake()
     {
