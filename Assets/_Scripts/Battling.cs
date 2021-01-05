@@ -10,6 +10,7 @@ public class Battling : MonoBehaviour
     public float lowBound; //killing condition;
     public GameObject proj; //Projectile
     public float shootPower;
+    public float shootDelay;
     public int maxHealth;
     public List<GameObject> hearts;
     [Header("Melee attacking")]
@@ -26,6 +27,7 @@ public class Battling : MonoBehaviour
     public Movement parent;
     private Vector3 mousePos;
     private Camera mainCam;
+    private float shootTime;
     //Variables for melee attack system;
 
 
@@ -35,6 +37,7 @@ public class Battling : MonoBehaviour
         ctc = new ContactFilter2D();
         ctc.layerMask = attackables;
         mainCam = Camera.main;
+        shootTime = 0;
     }
     public void Spawn()
     {
@@ -47,6 +50,8 @@ public class Battling : MonoBehaviour
             go.GetComponent<Animator>().SetBool("toIdle", true);
             go.GetComponent<Animator>().SetBool("isDead", false);
         }
+        attacking = false;
+        shielding = false;
         print("Spawned");
 
     }
@@ -85,9 +90,9 @@ public class Battling : MonoBehaviour
     void Update()
     {
         //Hitting
-        if (Input.GetKeyDown(parent.cm.controlls["attack"]) && !attacking && !shielding)
+        if (Input.GetKey(parent.cm.controlls["attack"]) && !attacking && !shielding)
         {
-            if(gunType == 0)
+            if(gunType == 0 )
             {
                 attackZone.OverlapCollider(ctc, attackCollisions);
                 parent.anim.SetBool("attack", true);
@@ -101,14 +106,21 @@ public class Battling : MonoBehaviour
                     }
                 }
             }
-            else if(gunType == 1)
+            else if(gunType == 1 && Time.time - shootTime > shootDelay)
             {
+                shootTime = Time.time;
                 launchProjectile(proj);
 
             }
 
         }
       
+        if(Input.GetKeyDown(parent.cm.controlls["change"]))
+        {
+            gunType++;
+            gunType %= 2;//2 - max amount of guns
+
+        }
        
         //ShieldingIn
         if (Input.GetKeyDown(parent.cm.controlls["shield"]))
@@ -119,15 +131,9 @@ public class Battling : MonoBehaviour
         if (Input.GetKeyUp(parent.cm.controlls["shield"]))
         {
             parent.anim.SetBool("shield", false);
-            shielding = false;
+            shielding = false; 
         }
 
-        if(Input.GetKeyDown(parent.cm.controlls["change"]))
-        {
-            gunType++;
-            gunType %= 2;//2 - max amount of guns
-
-        }
 
     }
 
@@ -155,8 +161,11 @@ public class Battling : MonoBehaviour
         parent.anim.SetBool("attack", false);
     }
 
-    public void onShield()
+
+    
+    public void onShieldOut()
     {
         parent.anim.SetBool("toIdle", true);
+        
     }
 }
