@@ -268,7 +268,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: james_shieldback
+  m_Name: james_shieldBack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -282,7 +282,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cfbf0e6cfceff7e4596f4acfb38b4b30, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5db56a3ef894a79439697f4c9d9d7552, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -346,7 +346,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6f8d9d8c01c57c548ab853e2034cfde5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 72e9dc9821d761945bcd10e06049ac36, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

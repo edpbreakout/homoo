@@ -74,8 +74,8 @@ GameObject:
   - component: {fileID: 8221866908875086710}
   - component: {fileID: 8221866908875086601}
   - component: {fileID: 8221866908875086711}
-  - component: {fileID: 8221866908875086709}
   - component: {fileID: 8221866908875086706}
+  - component: {fileID: 266487102}
   m_Layer: 10
   m_Name: James
   m_TagString: Untagged
@@ -236,37 +236,6 @@ MonoBehaviour:
   jumpCount: 0
   groundCollisions: []
   btl: {fileID: 0}
---- !u!114 &8221866908875086709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221866908875086605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ea3e814fa38b224a9690cc041987f24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lowBound: -15
-  proj: {fileID: 3414090616233549125, guid: e55668d57e2ccad448253dc09d4b57c4, type: 3}
-  shootPower: 20
-  maxHealth: 3
-  hearts:
-  - {fileID: 489797656}
-  - {fileID: 0}
-  - {fileID: 0}
-  attackables:
-    serializedVersion: 2
-    m_Bits: 1024
-  attackZone: {fileID: 8221866908875086706}
-  attackCollisions: []
-  attacking: 0
-  shielding: 0
-  gunType: 0
-  health: 0
-  rigid: {fileID: 0}
-  parent: {fileID: 8221866908875086711}
 --- !u!60 &8221866908875086706
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -298,6 +267,38 @@ PolygonCollider2D:
       - {x: 0.40964633, y: 0.70961344}
       - {x: 0.28618354, y: 0.3870666}
       - {x: 0.35486656, y: 0.17347008}
+--- !u!114 &266487102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221866908875086605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 642012a35d226da4198074469cbdf17a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 8221866908875086711}
+  lowBound: -15
+  proj: {fileID: 3414090616233549125, guid: e55668d57e2ccad448253dc09d4b57c4, type: 3}
+  shootPower: 20
+  shootDelay: 0.3
+  maxHealth: 4
+  hearts:
+  - {fileID: 489797656}
+  - {fileID: 3494459417615312159}
+  - {fileID: 706528784864347220}
+  attackables:
+    serializedVersion: 2
+    m_Bits: 1024
+  attackZone: {fileID: 8221866908875086706}
+  attackCollisions: []
+  attacking: 0
+  shielding: 0
+  gunType: 0
+  health: 0
+  rigid: {fileID: 0}
 --- !u!1001 &2181074770898491224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -308,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
         type: 3}
@@ -367,6 +368,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc24982271e92142a157a955be704f9, type: 3}
+--- !u!1 &3494459417615312159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3331093216563966535, guid: 4cc24982271e92142a157a955be704f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2181074770898491224}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3494459417615312157 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
@@ -383,7 +390,7 @@ PrefabInstance:
     - target: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
         type: 3}
@@ -442,6 +449,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cc24982271e92142a157a955be704f9, type: 3}
+--- !u!1 &706528784864347220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3331093216563966535, guid: 4cc24982271e92142a157a955be704f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2879053115828450835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &706528784864347222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3331093216563966533, guid: 4cc24982271e92142a157a955be704f9,
@@ -509,6 +522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3331093216563966534, guid: 4cc24982271e92142a157a955be704f9,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3331093216563966535, guid: 4cc24982271e92142a157a955be704f9,
         type: 3}

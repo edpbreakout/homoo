@@ -7,6 +7,7 @@ using UnityEngine;
 public class Battling : MonoBehaviour
 {
     [Header("Inspector")]
+    public Movement parent;
     public float lowBound; //killing condition;
     public GameObject proj; //Projectile
     public float shootPower;
@@ -24,7 +25,6 @@ public class Battling : MonoBehaviour
     public int gunType;
     public int health;
     public Rigidbody2D rigid;
-    public Movement parent;
     private Vector3 mousePos;
     private Camera mainCam;
     private float shootTime;
@@ -53,8 +53,9 @@ public class Battling : MonoBehaviour
         attacking = false;
         shielding = false;
         print("Spawned");
-
     }
+
+   
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Projectile>() != null && !shielding)
@@ -67,8 +68,12 @@ public class Battling : MonoBehaviour
             }
         }
     }
-    void launchProjectile(GameObject pj)
+    public void rangeAttack(GameObject pj)
     {
+        if (Time.time - shootTime < shootDelay)
+            return;
+        shootTime = Time.time;
+
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = 0;
         Vector3 centerPos = transform.position + Vector3.up * 0.5f;
@@ -87,6 +92,35 @@ public class Battling : MonoBehaviour
         //Setting the number of the "author" of projectile, so proj won't hit author himself
         go.GetComponent<Projectile>().playerNo = parent.PlayerNo;
     }
+
+    public void meleeAttack()
+    {
+        attackZone.OverlapCollider(ctc, attackCollisions);
+        parent.anim.SetBool("attack", true);
+        attacking = true;    //This value set to false, when animation ends;
+        foreach (Collider2D go in attackCollisions)
+        {
+            Battling btl = go.GetComponentInParent<Battling>();
+            if (btl != null && !btl.shielding)
+            {
+                btl.onDamage();
+            }
+        }
+    }
+
+    public virtual void Shielding()
+    {
+        if (Input.GetKeyDown(parent.cm.controlls["shield"]))
+        {
+            parent.anim.SetBool("shield", true);
+            shielding = true;
+        }
+        if (Input.GetKeyUp(parent.cm.controlls["shield"]))
+        {
+            parent.anim.SetBool("shield", false);
+            shielding = false;
+        }
+    }
     void Update()
     {
         //Hitting
@@ -94,23 +128,11 @@ public class Battling : MonoBehaviour
         {
             if(gunType == 0 )
             {
-                attackZone.OverlapCollider(ctc, attackCollisions);
-                parent.anim.SetBool("attack", true);
-                attacking = true;    //This value set to false, when animation ends;
-                foreach(Collider2D go in attackCollisions)
-                {
-                    Battling btl = go.GetComponentInParent<Battling>();
-                    if (btl != null)
-                    {
-                        btl.onDamage();
-                    }
-                }
+                meleeAttack();
             }
-            else if(gunType == 1 && Time.time - shootTime > shootDelay)
+            else if(gunType == 1)
             {
-                shootTime = Time.time;
-                launchProjectile(proj);
-
+                rangeAttack(proj);
             }
 
         }
@@ -121,51 +143,32 @@ public class Battling : MonoBehaviour
             gunType %= 2;//2 - max amount of guns
 
         }
-       
-        //ShieldingIn
-        if (Input.GetKeyDown(parent.cm.controlls["shield"]))
-        {
-            parent.anim.SetBool("shield", true);
-            shielding = true;
-        }
-        if (Input.GetKeyUp(parent.cm.controlls["shield"]))
-        {
-            parent.anim.SetBool("shield", false);
-            shielding = false; 
-        }
 
+        Shielding();
+        
 
-    }
-
-    private void LateUpdate()
-    {
-        //killing conditions;
         if (transform.position.y < lowBound || health <= 0)
         {
             ControllManager.S.respawn(parent.PlayerNo);
         }
     }
-    
     public void onDamage()
     {
         health--;
         if(health > 0)
+        {
             hearts[health - 1].GetComponent<Animator>().SetBool("isDead", true);
+        }
 
     }
-
     //Animation event functions
     public void onHit()
     {
         attacking = false;
         parent.anim.SetBool("attack", false);
     }
-
-
-    
     public void onShieldOut()
     {
         parent.anim.SetBool("toIdle", true);
-        
     }
 }

@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-
 public class Movement : MonoBehaviour
 {
 
@@ -31,15 +29,11 @@ public class Movement : MonoBehaviour
         cm = ControllManager.S.players[PlayerNo];
         btl = GetComponent<Battling>();
     }
-
-
-
-    
     // Update is called once per frame
     void Update()
     {
         float hor = 0, ver;
-       
+
         if (Input.GetKey(cm.controlls["left"]))
         {
             hor = -speed;
@@ -93,14 +87,6 @@ public class Movement : MonoBehaviour
                 rigid.velocity = new Vector2(rigid.velocity.x, 0);
                 rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             }
-
         }
-
-
-
     }
-
-
-
-
 }
